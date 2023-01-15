@@ -1044,7 +1044,7 @@ function SuggestionsOverlay(_ref) {
     } else if (bottom > ulElement.offsetHeight) {
       ulElement.scrollTop = bottom - ulElement.offsetHeight;
     }
-  }, []);
+  }, [focusIndex]); // https://github.com/signavio/react-mentions/pull/628/commits/b1569d7593be1ebe99f7085146cfa6e40c2d8c14
 
   var renderSuggestions = function renderSuggestions() {
     var suggestionsToRender = Object.values(suggestions).reduce(function (accResults, _ref2) {

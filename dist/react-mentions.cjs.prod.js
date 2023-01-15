@@ -626,7 +626,7 @@ function SuggestionsOverlay(_ref) {
       var scrollTop = ulElement.scrollTop, _ulElement$children$f = ulElement.children[focusIndex].getBoundingClientRect(), top = _ulElement$children$f.top, bottom = _ulElement$children$f.bottom, topContainer = ulElement.getBoundingClientRect().top;
       bottom = bottom - topContainer + scrollTop, (top = top - topContainer + scrollTop) < scrollTop ? ulElement.scrollTop = top : bottom > ulElement.offsetHeight && (ulElement.scrollTop = bottom - ulElement.offsetHeight);
     }
-  }, []);
+  }, [ focusIndex ]);
   var suggestionsToRender, renderSuggestion = function(result, queryInfo, index) {
     var isFocused = index === focusIndex, childIndex = queryInfo.childIndex, query = queryInfo.query, renderSuggestion = React.Children.toArray(children)[childIndex].props.renderSuggestion;
     return React__default.createElement(Suggestion$1, {

@@ -50,7 +50,7 @@ function SuggestionsOverlay({
     } else if (bottom > ulElement.offsetHeight) {
       ulElement.scrollTop = bottom - ulElement.offsetHeight
     }
-  }, [])
+  }, [focusIndex]) // https://github.com/signavio/react-mentions/pull/628/commits/b1569d7593be1ebe99f7085146cfa6e40c2d8c14
 
   const renderSuggestions = () => {
     const suggestionsToRender = Object.values(suggestions).reduce(
